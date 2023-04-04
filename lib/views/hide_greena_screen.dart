@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:storeflower/constant.dart';
 
 class HideGreena extends StatelessWidget {
@@ -8,17 +9,18 @@ class HideGreena extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: KPrimaryColor,
-      child: Column(
+      child: PageView(
         children: [
-          const SizedBox(
-            height: 200,
+          Column(
+            children: [
+              Image.asset(
+                'assets/images/logo11.png',
+                height: 600,
+              ),
+              Spacer(),
+              Image.asset('assets/images/Rectangle 3080.png')
+            ],
           ),
-          Image.asset(
-            'assets/images/اللوغو 1 (1).png',
-            height: 100,
-          ),
-          Spacer(),
-          Image.asset('assets/images/Rectangle 3080.png')
         ],
       ),
     );
